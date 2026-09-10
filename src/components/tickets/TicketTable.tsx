@@ -1,7 +1,7 @@
 import React from 'react';
 import { format } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
-import { useFilteredTickets, useTicketStore } from '../../store/ticketStore';
+import { useFilteredTickets } from '../../store/ticketStore';
 import { PriorityBadge } from '../common/Badge';
 import { StatusSelect } from './StatusSelect';
 import { EmptyState } from '../common/EmptyState';

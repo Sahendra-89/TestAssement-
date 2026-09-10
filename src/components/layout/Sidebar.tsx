@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, Ticket, Settings, User } from 'lucide-react';
 import { cn } from '../../utils/cn';
 
