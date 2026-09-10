@@ -1,0 +1,286 @@
+import type { Ticket } from '../types';
+
+export const mockTickets: Ticket[] = [
+  {
+    id: 'TCK-1001',
+    customer: {
+      name: 'John Smith',
+      email: 'john@example.com',
+      phone: '+1 555 123 4567',
+    },
+    subject: 'Unable to reset password',
+    description: 'Customer is unable to reset their account password. The reset email never arrives.',
+    priority: 'High',
+    status: 'Open',
+    createdAt: '2026-09-10T09:30:00Z',
+    messages: [
+      {
+        id: 'MSG-1',
+        sender: 'customer',
+        senderName: 'John Smith',
+        message: 'I have tried resetting my password several times but I am not receiving the email.',
+        timestamp: '2026-09-10T09:30:00Z',
+      },
+      {
+        id: 'MSG-2',
+        sender: 'support',
+        senderName: 'Support Team',
+        message: 'We are checking this issue for you. Please make sure to check your spam folder.',
+        timestamp: '2026-09-10T09:45:00Z',
+      },
+      {
+        id: 'MSG-3',
+        sender: 'customer',
+        senderName: 'John Smith',
+        message: 'I checked the spam folder, it is not there.',
+        timestamp: '2026-09-10T09:50:00Z',
+      }
+    ],
+  },
+  {
+    id: 'TCK-1002',
+    customer: {
+      name: 'Sarah Connor',
+      email: 'sarah.c@sky.net',
+    },
+    subject: 'Billing discrepancy on last invoice',
+    description: 'The last invoice shows a charge of $49.99 instead of the usual $29.99.',
+    priority: 'Medium',
+    status: 'In Progress',
+    createdAt: '2026-09-09T14:15:00Z',
+    messages: [
+      {
+        id: 'MSG-4',
+        sender: 'customer',
+        senderName: 'Sarah Connor',
+        message: 'My recent invoice #INV-492 is showing an incorrect amount. Can you fix this?',
+        timestamp: '2026-09-09T14:15:00Z',
+      },
+      {
+        id: 'MSG-5',
+        sender: 'support',
+        senderName: 'Billing Team',
+        message: 'Hello Sarah. Let me look into your billing history to see where the extra charge came from.',
+        timestamp: '2026-09-09T15:00:00Z',
+      },
+    ],
+  },
+  {
+    id: 'TCK-1003',
+    customer: {
+      name: 'Michael Scott',
+      email: 'mscott@dundermifflin.com',
+      phone: '+1 555 987 6543',
+    },
+    subject: 'Application crashing on launch',
+    description: 'The desktop application crashes immediately after double clicking the icon.',
+    priority: 'High',
+    status: 'Resolved',
+    createdAt: '2026-09-08T10:00:00Z',
+    messages: [
+      {
+        id: 'MSG-6',
+        sender: 'customer',
+        senderName: 'Michael Scott',
+        message: 'The app is broken. It just closes when I try to open it.',
+        timestamp: '2026-09-08T10:00:00Z',
+      },
+      {
+        id: 'MSG-7',
+        sender: 'support',
+        senderName: 'Tech Support',
+        message: 'Hi Michael. Please try downloading the latest patch (v2.1.4) from our website.',
+        timestamp: '2026-09-08T11:20:00Z',
+      },
+      {
+        id: 'MSG-8',
+        sender: 'customer',
+        senderName: 'Michael Scott',
+        message: 'That fixed it. Thanks!',
+        timestamp: '2026-09-08T12:05:00Z',
+      },
+    ],
+  },
+  {
+    id: 'TCK-1004',
+    customer: {
+      name: 'Elena Gilbert',
+      email: 'elena@mystic.com',
+    },
+    subject: 'Feature request: Dark mode',
+    description: 'Customer is requesting a dark mode for the web interface.',
+    priority: 'Low',
+    status: 'Open',
+    createdAt: '2026-09-09T16:30:00Z',
+    messages: [
+      {
+        id: 'MSG-9',
+        sender: 'customer',
+        senderName: 'Elena Gilbert',
+        message: 'Are there any plans to add a dark mode? The bright white hurts my eyes at night.',
+        timestamp: '2026-09-09T16:30:00Z',
+      },
+    ],
+  },
+  {
+    id: 'TCK-1005',
+    customer: {
+      name: 'Bruce Wayne',
+      email: 'bruce@wayne-ent.com',
+    },
+    subject: 'Security vulnerability report',
+    description: 'Customer claims to have found a vulnerability in the login flow.',
+    priority: 'High',
+    status: 'In Progress',
+    createdAt: '2026-09-10T02:15:00Z',
+    messages: [
+      {
+        id: 'MSG-10',
+        sender: 'customer',
+        senderName: 'Bruce Wayne',
+        message: 'I noticed a potential issue with the SSO implementation. Details attached.',
+        timestamp: '2026-09-10T02:15:00Z',
+      },
+      {
+        id: 'MSG-11',
+        sender: 'support',
+        senderName: 'Security Team',
+        message: 'Thank you for the report. Our engineering team is reviewing this immediately.',
+        timestamp: '2026-09-10T02:30:00Z',
+      },
+    ],
+  },
+  {
+    id: 'TCK-1006',
+    customer: {
+      name: 'Clark Kent',
+      email: 'clark.kent@dailyplanet.com',
+    },
+    subject: 'How to export data to CSV?',
+    description: 'Customer needs help exporting their reporting data.',
+    priority: 'Low',
+    status: 'Resolved',
+    createdAt: '2026-09-05T09:12:00Z',
+    messages: [
+      {
+        id: 'MSG-12',
+        sender: 'customer',
+        senderName: 'Clark Kent',
+        message: 'I need to write an article and need the data in CSV format. Where is the export button?',
+        timestamp: '2026-09-05T09:12:00Z',
+      },
+      {
+        id: 'MSG-13',
+        sender: 'support',
+        senderName: 'Support Team',
+        message: 'Hi Clark. You can find the export button in the top right corner of the Reports dashboard.',
+        timestamp: '2026-09-05T09:45:00Z',
+      },
+    ],
+  },
+  {
+    id: 'TCK-1007',
+    customer: {
+      name: 'Diana Prince',
+      email: 'diana@themyscira.gov',
+    },
+    subject: 'Subscription upgrade not reflecting',
+    description: 'Upgraded to Pro plan but still seeing Free tier limits.',
+    priority: 'Medium',
+    status: 'Open',
+    createdAt: '2026-09-10T08:22:00Z',
+    messages: [
+      {
+        id: 'MSG-14',
+        sender: 'customer',
+        senderName: 'Diana Prince',
+        message: 'I paid for the Pro upgrade an hour ago but my account still says Free.',
+        timestamp: '2026-09-10T08:22:00Z',
+      },
+    ],
+  },
+  {
+    id: 'TCK-1008',
+    customer: {
+      name: 'Barry Allen',
+      email: 'barry@ccpd.gov',
+    },
+    subject: 'API rate limits too restrictive',
+    description: 'Customer is hitting API rate limits constantly.',
+    priority: 'Medium',
+    status: 'In Progress',
+    createdAt: '2026-09-07T11:45:00Z',
+    messages: [
+      {
+        id: 'MSG-15',
+        sender: 'customer',
+        senderName: 'Barry Allen',
+        message: 'Your API rate limits are too low. I am processing data very fast and keep getting 429s.',
+        timestamp: '2026-09-07T11:45:00Z',
+      },
+      {
+        id: 'MSG-16',
+        sender: 'support',
+        senderName: 'Dev Support',
+        message: 'Hi Barry. We can increase your limit on the Enterprise plan. Would you like to discuss upgrading?',
+        timestamp: '2026-09-07T14:10:00Z',
+      },
+      {
+        id: 'MSG-17',
+        sender: 'customer',
+        senderName: 'Barry Allen',
+        message: 'Yes, please send over the details.',
+        timestamp: '2026-09-07T14:15:00Z',
+      },
+    ],
+  },
+  {
+    id: 'TCK-1009',
+    customer: {
+      name: 'Arthur Curry',
+      email: 'arthur@atlantis.org',
+    },
+    subject: 'Water damage coverage?',
+    description: 'Inquiring about hardware warranty related to water damage.',
+    priority: 'Low',
+    status: 'Resolved',
+    createdAt: '2026-09-01T13:30:00Z',
+    messages: [
+      {
+        id: 'MSG-18',
+        sender: 'customer',
+        senderName: 'Arthur Curry',
+        message: 'Does the standard warranty cover water damage? I accidentally dropped my device in the ocean.',
+        timestamp: '2026-09-01T13:30:00Z',
+      },
+      {
+        id: 'MSG-19',
+        sender: 'support',
+        senderName: 'Warranty Team',
+        message: 'Hello Arthur. Unfortunately, the standard warranty does not cover liquid damage. You would need the Accidental Damage Protection plan.',
+        timestamp: '2026-09-01T15:20:00Z',
+      },
+    ],
+  },
+  {
+    id: 'TCK-1010',
+    customer: {
+      name: 'Victor Stone',
+      email: 'victor@titan.net',
+    },
+    subject: 'Integration with third-party tools',
+    description: 'Wants to know if we support integration with custom internal systems.',
+    priority: 'Medium',
+    status: 'Open',
+    createdAt: '2026-09-10T10:05:00Z',
+    messages: [
+      {
+        id: 'MSG-20',
+        sender: 'customer',
+        senderName: 'Victor Stone',
+        message: 'Can I connect your system directly to my custom cybernetic infrastructure using Webhooks?',
+        timestamp: '2026-09-10T10:05:00Z',
+      },
+    ],
+  }
+];
